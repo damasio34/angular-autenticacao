@@ -1,0 +1,26 @@
+{
+    "name": "angular-autenticacao",
+    "version": "1.0.0",
+    "description": "Projeto de autenticação com angujarJs",
+    "main": "src/index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/damasio34/angular-autenticacao.git"
+    },
+    "author": "Darlan Damasio (damasio34)",
+    "bugs": {
+        "url": "https://github.com/damasio34/angular-autenticacao/issues"
+    },
+    "homepage": "https://github.com/damasio34/angular-autenticacao",
+    "devDependencies": {
+        "browser-sync": "^2.7.3",
+        "gulp": "^3.8.11",
+        "gulp-concat": "^2.5.2",
+        "gulp-jshint": "^1.10.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^1.2.0",
+    }
+}
