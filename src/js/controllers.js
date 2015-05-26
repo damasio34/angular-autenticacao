@@ -2,9 +2,9 @@
 
     'use strict';
 
-    angular.module('angularAutenticacao.controllers', [])
-        .controller('LoginController', function ($scope, $rootScope, AUTH_EVENTS, AuthService, $location) {
-
+    angular.module('angularAutenticacao.controllers', ['angularAutenticacao.constants', 'angularAutenticacao.services'])
+        .controller('LoginController', function ($scope, $rootScope, $location, AUTH_EVENTS, AuthService) {
+        alert();
         $scope.credentials = {
             username: '',
             password: ''

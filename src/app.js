@@ -4,9 +4,12 @@
 
 	//módulo root do app
 	angular.module('angularAutenticacao', [
+		'ui-bootstrap',
 		'angularAutenticacao.constants',
 		'angularAutenticacao.controllers',
-		'angularAutenticacao.services'
+		'angularAutenticacao.factories',
+		'angularAutenticacao.services',
+		'angularAutenticacao.directives'
 
 	]).config(function ($httpProvider) {
 	    $httpProvider.interceptors.push([
@@ -17,9 +20,9 @@
 	    ]);
 	});
 
-	// Bootstrap do app
-	angular.element(document).ready(function() {
-		angular.bootstrap(document, ['angularAutenticacao']);
-	});
+	// // Bootstrap do app
+	// angular.element(document).ready(function() {
+	// 	angular.bootstrap(document, ['angularAutenticacao']);
+	// });
 
 })(angular);

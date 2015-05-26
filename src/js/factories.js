@@ -33,18 +33,17 @@
                 request: function (config) {
                     config.headers['Authorization'] = 'Bearer ' + Session.access_token;
                     return config || $q.when(config);
-                }
-            },
-            responseError: function (response) {
-                $rootScope.$broadcast({
-                    401: AUTH_EVENTS.notAuthenticated,
-                    403: AUTH_EVENTS.notAuthorized,
-                    419: AUTH_EVENTS.sessionTimeout,
-                    440: AUTH_EVENTS.sessionTimeout
-                    }[response.status], response);
-                return $q.reject(response);
-                }
-            };
+                },
+                responseError: function (response) {
+                    $rootScope.$broadcast({
+                        401: AUTH_EVENTS.notAuthenticated,
+                        403: AUTH_EVENTS.notAuthorized,
+                        419: AUTH_EVENTS.sessionTimeout,
+                        440: AUTH_EVENTS.sessionTimeout
+                        }[response.status], response);
+                    return $q.reject(response);
+                    }
+                };
         });
 
 })(angular);

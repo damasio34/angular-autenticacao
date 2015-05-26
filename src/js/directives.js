@@ -6,8 +6,7 @@
         .directive('loginDialog', function (Session, AUTH_EVENTS) {
             return {
                 restrict: 'A',
-                template: '
-        \'views/login_dialog.html\'">',
+                template: '../views/loginDialog.html',
                 link: function (scope, element, attrs) {
                     var showModal = function() {
                         scope.visible = true;
